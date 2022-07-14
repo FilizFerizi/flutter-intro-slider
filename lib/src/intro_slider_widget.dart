@@ -14,6 +14,8 @@ class IntroSlider extends StatefulWidget {
   /// Background color for all slides
   final Color? backgroundColorAllSlides;
 
+  final int startTab;
+
   // ---------- SKIP button ----------
   /// Render your own widget SKIP button
   final Widget? renderSkipBtn;
@@ -128,6 +130,7 @@ class IntroSlider extends StatefulWidget {
     // Slides
     this.slides,
     this.backgroundColorAllSlides,
+    required this.startTab,
 
     // Skip
     this.renderSkipBtn,
@@ -720,7 +723,7 @@ class IntroSliderState extends State<IntroSlider>
   }
 
   List<Widget>? renderListTabs() {
-    for (var i = 0; i < lengthSlide; i++) {
+    for (var i = widget.startTab; i < lengthSlide; i++) {
       final scrollController = ScrollController();
       scrollControllers.add(scrollController);
       tabs.add(
