@@ -933,14 +933,17 @@ class IntroSliderState extends State<IntroSlider>
       onTap: () {
         tabController.animateTo(index, curve: curveScroll);
       },
-      child: Opacity(
-        opacity: opacity,
-        child: Container(
-          decoration: BoxDecoration(
-              color: color, borderRadius: BorderRadius.circular(radius / 2)),
-          width: radius,
-          height: radius,
-          margin: EdgeInsets.only(left: radius / 2, right: radius / 2),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 30),
+        child: Opacity(
+          opacity: opacity,
+          child: Container(
+            decoration: BoxDecoration(
+                color: color, borderRadius: BorderRadius.circular(radius / 2)),
+            width: radius,
+            height: radius,
+            margin: EdgeInsets.only(left: radius / 2, right: radius / 2),
+          ),
         ),
       ),
     );
