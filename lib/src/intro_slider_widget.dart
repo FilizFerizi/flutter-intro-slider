@@ -934,7 +934,7 @@ class IntroSliderState extends State<IntroSlider>
         tabController.animateTo(index, curve: curveScroll);
       },
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 30),
+        padding: const EdgeInsets.only(bottom: 50),
         child: Opacity(
           opacity: opacity,
           child: Container(
